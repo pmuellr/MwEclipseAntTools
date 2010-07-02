@@ -1,0 +1,10 @@
+<project name="open-in-PathFinder" default="run">
+
+<target name="run">
+    <exec executable="python">
+        <arg value="open-in-PathFinder.py"/>
+        <arg value="${arg1}"/>
+    </exec>
+</target>
+
+</project>

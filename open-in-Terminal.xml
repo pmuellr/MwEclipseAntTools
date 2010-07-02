@@ -1,0 +1,10 @@
+<project name="open-in-Terminal" default="run">
+
+<target name="run">
+    <exec executable="python">
+        <arg value="open-in-Terminal.py"/>
+        <arg value="${arg1}"/>
+    </exec>
+</target>
+
+</project>
