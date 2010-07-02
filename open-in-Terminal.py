@@ -27,8 +27,10 @@ elif os.path.isfile(path):
     path = os.path.dirname(path)
 else:
     error("not a file or directory: %s" % path)
+    
+pathQuoted = "'%s'" % path
 
-script = 'tell application "Terminal"\n activate\n do script "cd %s"\n end tell\n' % path
+script = 'tell application "Terminal"\n activate\n do script "cd %s"\n end tell\n' % pathQuoted
 
 os.chdir(path)
 process = subprocess.Popen("osascript", stdin=subprocess.PIPE)
